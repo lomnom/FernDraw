@@ -10,22 +10,14 @@
 ## Installation
 ### Dependencies
 ```bash
-echo "import os;print(os.__file__.replace('os.py',''))" > aahifbsab.py
-PYPATH=$(python3 aahifbsab.py)
-rm aahifbsab.py
-curl https://raw.githubusercontent.com/lomnom/FUNC/main/FUNC.py > kashdfj.py
-mv kashdfj.py "$PYPATH"FUNC.py
+PYPATH=$(python3 -c "import os;print(os.__file__.replace('os.py',''))")
+curl https://raw.githubusercontent.com/lomnom/TERMINALFUNC/main/TERMINALFUNC.py > "$PYPATH"TERMINALFUNC.py
 
-echo "import os;print(os.__file__.replace('os.py',''))" > aahifbsab.py
-PYPATH=$(python3 aahifbsab.py)
-rm aahifbsab.py
-curl https://raw.githubusercontent.com/lomnom/ESCAPES/main/ESCAPES.py > kashdfj.py
-mv kashdfj.py "$PYPATH"ESCAPES.py
+PYPATH=$(python3 -c "import os;print(os.__file__.replace('os.py',''))")
+curl https://raw.githubusercontent.com/lomnom/ESCAPES/main/ESCAPES.py > "$PYPATH"ESCAPES.py
 
-echo "import os;print(os.__file__.replace('os.py',''))" - aahifbsab.py
-PYPATH=$(python3 aahifbsab.py)
-rm aahifbsab.py
-rm "$PYPATH"TERMINALFUNC.py
+PYPATH=$(python3 -c "import os;print(os.__file__.replace('os.py',''))")
+curl https://raw.githubusercontent.com/lomnom/FUNC/main/FUNC.py > "$PYPATH"FUNC.py
 
 pip3 install pyautogui
 ```
