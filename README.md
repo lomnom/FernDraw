@@ -22,6 +22,11 @@ rm aahifbsab.py
 curl https://raw.githubusercontent.com/lomnom/ESCAPES/main/ESCAPES.py > kashdfj.py
 mv kashdfj.py "$PYPATH"ESCAPES.py
 
+echo "import os;print(os.__file__.replace('os.py',''))" - aahifbsab.py
+PYPATH=$(python3 aahifbsab.py)
+rm aahifbsab.py
+rm "$PYPATH"TERMINALFUNC.py
+
 pip3 install pyautogui
 ```
 ### This
