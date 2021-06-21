@@ -8,7 +8,7 @@
 6. wait 6 hours and 40 minuites, dont touch your mouse or change apps
 7. profit from nitfy.ink users that are unaware of your wizardry
 ## Installation
-### dependencies
+### Dependencies
 ```bash
 echo "import os;print(os.__file__.replace('os.py',''))" > aahifbsab.py
 PYPATH=$(python3 aahifbsab.py)
@@ -24,7 +24,7 @@ mv kashdfj.py "$PYPATH"ESCAPES.py
 
 pip3 install pyautogui
 ```
-### this
+### This
 `git clone https://github.com/lomnom/FernDraw`
 ## dependencies
 https://github.com/lomnom/TERMINALFUNC  
