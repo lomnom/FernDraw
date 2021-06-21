@@ -26,3 +26,6 @@ pip3 install pyautogui
 ```
 ### this
 `git clone https://github.com/lomnom/FernDraw`
+## dependencies
+https://github.com/lomnom/TERMINALFUNC
+https://pyautogui.readthedocs.io/en/latest/
