@@ -1,10 +1,10 @@
 # importing necessary modules
 from random import randint
-import FUNC as f
-from TERMINALFUNC import FramerateLimiter
 import pyautogui as pag
 import datetime
-  
+
+pag.PAUSE=0.015
+
 def biggest(theList):
 	biggestThing=theList.pop()
 	for thing in theList:
@@ -35,7 +35,9 @@ y.append(0)
   
 current = 0
 
-f.log("getting points")
+def log(msg):
+	print(msg)
+log("getting points")
 
 for i in range(1, 50000):
 	# generates a random integer between 1 and 100
@@ -66,9 +68,9 @@ for i in range(1, 50000):
 		  
 	current = current + 1
 
-f.log("done!")
+log("done!")
 
-f.log("getting values")
+log("getting values")
 biggestX=biggest(x)
 biggestY=biggest(y)
 
@@ -84,30 +86,23 @@ canvasSizeX=abs(topLeftEdge.x-bottomRightEdge.x)
 canvasSizeY=abs(topLeftEdge.y-bottomRightEdge.y)
 
 transform=canvasSizeY/fractalSizeY
-f.log("done!")
+log("done!")
 
 print("fractalSizeY: {}, fractalSizeX: {}".format(fractalSizeY,fractalSizeX))
 print("canvasSizeX: {}, canvasSizeY: {}".format(canvasSizeX,canvasSizeY))
 print("transform: {}".format(transform))
 
-rateLimiter=FramerateLimiter(2)
-
-f.log("starting to draw!")
-for n in f.everyIndexInList(x):
-	rateLimiter.startFrame()
-
+log("starting to draw!")
+for n in range(len(x)):
 	theX=middleXOfCanvas+(x[n]*transform)
 	theY=bottomRightEdge.y-(y[n]*transform)
 	print("")
-	f.log("x: {}, y: {}".format(x[n],y[n]))
-	f.log("transformedX: {}, transformedY: {}".format(theX,theY))
-	f.log(("clickX: {}, clickY: {}".format(theX,theY)))
-	f.log("progress: {}/{}".format(n,len(x)-1))
-	f.log("time left: {}".format(str(datetime.timedelta(seconds=(len(x)-(n+1))*0.5))))
+	log("x: {}, y: {}".format(x[n],y[n]))
+	log("transformedX: {}, transformedY: {}".format(theX,theY))
+	log(("clickX: {}, clickY: {}".format(theX,theY)))
+	log("progress: {}/{}".format(n,len(x)-1))
+	log("time left: {}".format(str(datetime.timedelta(seconds=(len(x)-(n+1))*0.5))))
 
 	pag.moveTo(theX,theY)
 	pag.click()
-
-	rateLimiter.endFrame()
-	rateLimiter.delayTillNextFrame()
-f.log("finished")
+log("finished")

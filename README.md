@@ -10,12 +10,10 @@
 ## Installation
 ### Dependencies
 ```bash
-PYPATH=$(python3 -c "import os;print(os.__file__.replace('os.py',''))")
-curl https://raw.githubusercontent.com/lomnom/TERMINALFUNC/main/TERMINALFUNC.py > "$PYPATH"TERMINALFUNC.py
-curl https://raw.githubusercontent.com/lomnom/ESCAPES/main/ESCAPES.py > "$PYPATH"ESCAPES.py
-curl https://raw.githubusercontent.com/lomnom/FUNC/main/FUNC.py > "$PYPATH"FUNC.py
-
 pip3 install pyautogui
 ```
 ### This
 `git clone https://github.com/lomnom/FernDraw`
+
+### Example result
+![image](Screenshot.png)
